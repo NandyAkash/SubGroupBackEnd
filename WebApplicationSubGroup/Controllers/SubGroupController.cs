@@ -22,6 +22,9 @@ namespace WebApplicationSubGroup.Controllers
             _configuration = configuration;
         }
 
+
+
+
         [HttpGet]
 
         public JsonResult Get()
@@ -35,6 +38,7 @@ namespace WebApplicationSubGroup.Controllers
                     convert(varchar(10),UpdateDate,120) as UpdateDate,
                     convert(varchar(10),UpdateTime,120) as UpdateTime
                     from dbo.subGroupNew";
+            
             DataTable table = new DataTable();
             string sqlDataSource = _configuration.GetConnectionString("subgroupnew");
             SqlDataReader myReader;
